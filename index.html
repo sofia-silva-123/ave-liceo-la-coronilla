@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajo de sofia silva / Liceo La Coronilla</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+.fondo-background{
+    background-image: url(foto.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.degradado {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(360deg, black, transparent);}
+.informacion {
+    margin: 40px 2% 20px;
+    width: 96%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+.info.txt {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #3b7eb8;
+    border-radius: 10px;
+    height: 250px;
+    margin: 0px 1% 40px;
+}
+.info.txt h3 {
+    padding: 10px 0px;
+    font-variant-caps: all-petite-caps;
+    font-family: monospace;
+    font-size: xx-large;
+}
+.info.txt p {
+    font-family: monospace;
+    height: 180px;
+    overflow: auto;
+}
+.info.txt p::-webkit-scrollbar{
+    width: 5px;
+}
+.info.txt p::-webkit-scrollbar-thumb{
+    background-color: #3b7eb8;
+    border-radius: 5px;
+}
+.informacion-velocidad-y-eso::-webkit-scrollbar-thumb{
+    background-color: #3b7eb8;
+    border-radius: 5px;
+}
+.informacion-velocidad-y-eso::-webkit-scrollbar{
+    height: 5px;
+}
+.ave-informacion {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.info-Ave {
+    width: 70%;
+    margin: 0px 80px;
+    background: #ddddddd1;
+    border-radius: 20px;
+    max-width: 540px;
+    padding: 30px;
+    text-align: center;
+    max-height: 462px;
+}
+.info-Ave h2 {
+    font-family: monospace;
+    font-size: -webkit-xxx-large;
+}
+
+p.descripcion-pajaro {
+    font-family: monospace;
+    padding: 10px;
+}
+.detalles-ave {
+    text-align: left;
+    font-family: monospace;
+}
+p.info-detalles-ave {
+    padding: 8px;
+    font-size: large;
+}
+p.info-detalles-ave span {
+    color: #3b7eb8;
+    margin: 0px 0px 0px 20px;
+}
+.informacion-velocidad-y-eso {
+    width: 96%;
+    display: flex;
+    font-family: monospace;
+    color: white;
+    margin: 0px 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.velocidad-y-eso-div {
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-align: center;
+}
+p.detalles-velocidadyeso {
+    font-size: large;
+    text-align: center;
+}
+.fotos {
+    width: 96%;
+    margin: 0px 2% 30px;
+    display: flex;
+    height: 400px;
+}
+.foto-grande {
+    height: 400px;
+    width: 50%;
+}
+.foto-grande img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.foto-chicas {
+    width: 49%;
+    margin: 0px 0px 0px 1%;
+}
+.arriba.img {
+    height: 48%;
+    margin: 1% 0px;
+    display: flex;
+}
+.arriba.img img {
+    width: 49%;
+    object-fit: cover;
+    height: 100%;
+    margin: 0px .5% 0px 0px;
+    border-radius: 20px;
+}
+.estilo-de-vida-habitos {
+    width: 96%;
+    margin: 0px 2% 30px;
+    display: flex;
+}
+.foto-ave-habitos {
+    width: 45%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.foto-ave-habitos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: top;
+    max-width: 415px;
+}
+.informacion-habitos {
+    width: 55%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: monospace;
+}
+h2.titulo-abitos {
+    font-family: monospace;
+    font-weight: 900;
+    padding: 40px 0px 0px 0px;
+}
+p.descripcion-habitos {
+    padding: 20px 0px 0px;
+    text-align: justify;
+    font-family: monospace;
+    height: 300px;
+    overflow: auto;
+}
+p.estilo-de-vida-p {
+    margin: 60px 0px 0px;
+    text-align: justify;
+    font-family: monospace;
+    font-size: x-large;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+audio {
+    margin: 0px 0px 0px 20px;
+    width: 200px;
+}
+span.huevos {
+    width: 98%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    margin: 20px 0px 20px;
+}
+.huevos img {
+    width: 50%;
+    padding: 2px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+@media (max-width: 747px){
+    .estilo-de-vida-habitos {
+    width: 96%;
+    margin: 0px 2% 30px;
+    display: block;
+}
+.informacion-habitos {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.foto-ave-habitos {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.huevos img {
+    width: 100%;
+    padding: 2px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+span.huevos {
+    width: 98%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    margin: 20px 0px 20px;
+    flex-wrap: wrap;
+}
+}
+@media (max-width: 599px){
+
+.info.txt{
+    width: 48%;
+}
+.fondo-background{
+    background-image: url(foto-2.jpg);
+
+}
+
+    .info-Ave {
+        width: 90%;
+        height: auto;
+        background: #ddddddd1;
+        border-radius: 20px;
+        max-width: 540px;
+        padding: 30px;
+        text-align: center;
+        margin: 0px;
+        max-height: fit-content;
+    }
+
+.ave-informacion {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p.info-detalles-ave span {
+    color: #3b7eb8;
+    margin: 0px 0px 0px 20px;
+    font-size: small;
+}
+.informacion-velocidad-y-eso {
+    width: 96%;
+    display: flex;
+    font-family: monospace;
+    color: white;
+    margin: 0px 2%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+}
+
+</style>
+<body>
+   <div class="fondo-background">
+    <div class="degradado"></div>
+    <div class="ave-informacion">
+
+        <div class="info-Ave">
+            <h2>Tero</h2>
+            <p class="descripcion-pajaro">Vanellus chilensis-tero, leque, avefría, alcaraván, pellar, queltehue, treile, Triel</p>
+            <div class="detalles-ave">
+            <p class="info-detalles-ave">REINO <span>Animalia</span></p>
+            <p class="info-detalles-ave">FILO <span>Chordata</span></p>
+            <p class="info-detalles-ave">CLASE <span>Aves</span></p>
+            <p class="info-detalles-ave">ORDEN <span>Charadriiformes</span></p>
+            <p class="info-detalles-ave">FAMILIA <span>Charadriidae</span></p>
+            <p class="info-detalles-ave">GÉNERO <span>Vanellus</span></p>
+            <p class="info-detalles-ave">ESPECIE <span>Vanellus chilensis</span></p>
+        </div>
+        </div>
+    </div>
+   </div> 
+<div class="informacion-velocidad-y-eso">
+    <div class="velocidad-y-eso-div"><h5>TAMAÑO DE LA POBLACIÓN</h5><p class="detalles-velocidadyeso">No cifras Exactas<span></span></p></div>
+    <div class="velocidad-y-eso-div"><h5>ESPERANZA DE VIDA</h5><p class="detalles-velocidadyeso">10-15 AÑOS<span></span></p></div>
+    <div class="velocidad-y-eso-div"><h5>VELOCIDAD MÁXIMA</h5><p class="detalles-velocidadyeso">30-40 <span>KM/H</span></p></div>
+    <div class="velocidad-y-eso-div"><h5>PESO</h5><p class="detalles-velocidadyeso">0.3-0.4 <span>KG</span></p></div>
+    <div class="velocidad-y-eso-div"><h5>LONGITUD</h5><p class="detalles-velocidadyeso">32-38 <span>CM</span></p></div>
+    <div class="velocidad-y-eso-div"><h5>ENVERGADURA</h5><p class="detalles-velocidadyeso">75-85 <span>CM</span></p></div>
+</div>
+<div class="informacion">
+    <div class="info txt">
+        <h3>Descripción</h3>
+        <p>El tero (Vanellus chilensis) es un ave de tamaño mediano que se destaca por su plumaje distintivo y su comportamiento notable. Los adultos tienen un plumaje de colores predominantes en gris con partes blancas y negras en las alas y la cola. La cabeza es de color negro, con una característica corona de plumas que se erige cuando están excitados o alarmados. Su pecho es de un gris claro y el abdomen es de un blanco pálido, proporcionando un contraste llamativo con el resto del cuerpo. Los jóvenes, por otro lado, tienen un plumaje más moteado en tonos marrones y grises que les proporciona un camuflaje efectivo en su entorno natural.
+
+            El pico del tero es recto y afilado, adaptado para buscar y capturar insectos y otros pequeños invertebrados que constituyen la mayor parte de su dieta. Sus patas son largas y delgadas, permitiéndole caminar rápidamente y correr con agilidad en busca de alimento. Los teros también tienen garras afiladas que utilizan para escarbar el suelo y defenderse de posibles amenazas. 
+
+            Además, los teros son conocidos por su comportamiento territorial y su agudo sentido de la vista. Son aves muy vigilantes y, a menudo, se pueden ver patrullando su territorio, emitiendo su característico llamado que puede ser oído a distancias considerables. Este llamado, que es un sonido agudo y repetitivo, sirve tanto para comunicar su presencia a otros teros como para disuadir a los intrusos.
+
+            En términos de tamaño, la envergadura de los teros puede variar entre 75 y 85 centímetros, mientras que el peso de los adultos oscila entre 0.3 y 0.4 kilogramos. Su tamaño compacto y su plumaje distintivo no solo los hacen fácilmente identificables, sino que también les permiten adaptarse a una variedad de hábitats y condiciones ambientales.</p>
+    </div>
+    <div class="info txt">
+        <h3>Hábitat</h3>
+        <p>El tero es una especie extremadamente adaptable que se encuentra en una amplia gama de hábitats, desde campos abiertos y praderas hasta áreas agrícolas y zonas cerca de cuerpos de agua. Prefieren ambientes con vegetación baja y abierta, lo que les permite una buena visibilidad para detectar depredadores y localizar alimento. Los teros son comunes en zonas de pastizales, áreas agrícolas y a lo largo de ríos y cuerpos de agua en América del Sur.
+
+            En áreas rurales y suburbanas, los teros pueden ser vistos en campos de cultivo, donde encuentran una abundante fuente de alimento en forma de insectos y otros invertebrados. En las regiones de pastizales, los teros suelen anidar en el suelo, creando nidos en el pasto alto y vegetación densa que proporciona cierta protección contra los depredadores.
+
+            Aunque no son aves estrictamente acuáticas, los teros también pueden ser encontrados cerca de ríos, lagos y humedales, donde el agua proporciona una fuente adicional de alimento y un ambiente favorable para la crianza de sus crías. En estas áreas, los teros a menudo se agrupan en pequeñas colonias, donde pueden socializar y protegerse mutuamente.
+
+            A lo largo de su rango, que se extiende desde el sur de Brasil y Paraguay hasta Uruguay y Argentina, los teros son aves comunes y ampliamente distribuidas. Su capacidad para adaptarse a diferentes tipos de hábitats y condiciones ambientales les ha permitido prosperar en una variedad de entornos y seguir siendo una parte integral del ecosistema local.</p>
+        <div class="img-colecciones">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="info txt">
+        <h3>Alimentación</h3>
+        <p>El tero es un ave omnívora que tiene una dieta variada, aunque su alimentación principal está compuesta por insectos y pequeños invertebrados. Utiliza su agudo sentido de la vista para detectar presas que se encuentran en el suelo o cerca de la superficie. El tero puede ser visto caminando lentamente y escarbando el suelo con su pico en busca de alimento. Su dieta incluye una amplia gama de insectos, como hormigas, escarabajos y orugas, así como arañas y otros invertebrados que encuentra en su entorno.
+
+            Durante la temporada de cría, los teros también pueden consumir pequeños vertebrados y huevos si están disponibles, lo que les proporciona una fuente adicional de proteínas para alimentar a sus crías. Su capacidad para adaptarse a diferentes fuentes de alimento les permite sobrevivir en una variedad de condiciones y hábitats.
+
+            Además de su dieta principal, los teros también pueden buscar alimentos en áreas cercanas a cuerpos de agua, donde pueden encontrar pequeños peces, ranas y otros animales acuáticos. En áreas urbanas y suburbanas, pueden alimentarse de residuos y restos de alimentos que encuentran en los campos y áreas agrícolas.
+
+            Los teros son conocidos por su comportamiento oportunista en la alimentación. A menudo se les ve robando comida de otras aves, especialmente durante la temporada de escasez de alimentos. Este comportamiento les permite aprovechar las oportunidades y reducir el tiempo y la energía que necesitan para encontrar su propio alimento.</p>
+        <div class="img-colecciones">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="info txt">
+        <h3>Comportamiento</h3>
+        <p>El tero es una especie muy territorial y social, especialmente durante la temporada de cría. Los teros adultos defienden ferozmente su territorio, utilizando su llamado característico para advertir a otros teros y mantener a los intrusos alejados. El comportamiento territorial incluye vuelos bajos y rápidos alrededor del área, así como ataques a cualquier ave que se acerque demasiado.
+
+            Durante la temporada de cría, los teros forman parejas monógamas y trabajan juntos para construir un nido en el suelo, que suele estar camuflado entre la vegetación. La hembra pone entre 2 y 4 huevos, que ambos padres incuban y cuidan. Los teros también exhiben un comportamiento de "fingir lesiones", donde uno de los padres actúa como si estuviera herido para atraer a los depredadores lejos del nido y de los polluelos.
+
+            Fuera de la temporada de cría, los teros pueden formar pequeños grupos o bandadas, especialmente en áreas donde la comida es abundante. En estos grupos, pueden socializar y buscar alimento juntos. Los teros tienen un agudo sentido de la vista, que les permite detectar presas y depredadores a grandes distancias. Este sentido altamente desarrollado es fundamental para su supervivencia y les permite adaptarse a diferentes condiciones y desafíos en su entorno.
+
+            Los teros también son conocidos por su comportamiento de vigilancia constante y su habilidad para adaptarse a cambios en su entorno. Su capacidad para ajustar su comportamiento en respuesta a nuevas amenazas y oportunidades es una de las razones por las que han tenido tanto éxito en una variedad de hábitats.</p>
+    </div>
+</div>
+
+   <div class="fotos">
+    <div class="foto-grande">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-bird-in-brazil-by-augusto-janiski-junior-flickr-augusto-janiski-junior-28129.webp" alt="">
+    </div>
+    <div class="foto-chicas">
+        <div class="arriba img">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-day-trip-from-puerto-varas-to-isla-grande-de-chiloe-in-and-around-caulin2c-chile-southern-lapwing-28vanellus-chilensis29-282518494211529.webp" alt="">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/dpp-2165.webp" alt="">
+    </div>
+    <div class="arriba img">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-bird-28unsplash29.webp" alt="">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-lapwing-28510342134629.webp" alt="">
+    </div>   
+    </div>
+   </div>
+   <div class="informacion">
+    <div class="info txt">
+        <h3>Reproducción</h3>
+        <p>El tero (Vanellus chilensis) es una especie monógama que suele formar parejas estables durante la temporada de reproducción, e incluso pueden mantenerse juntas durante varios años. La temporada de cría de los teros generalmente comienza en primavera, aunque puede variar dependiendo de la región y las condiciones climáticas. Durante este periodo, las parejas de teros seleccionan un lugar para anidar en el suelo, prefiriendo áreas con vegetación baja que ofrezcan un buen camuflaje.
+    
+            El nido de un tero es una simple depresión en el suelo, que ambos padres preparan utilizando pequeñas ramas, hojas y hierbas secas. A diferencia de muchas otras aves, los teros no construyen nidos elaborados; en su lugar, confían en el camuflaje y la vigilancia constante para proteger a sus huevos y crías de los depredadores. La hembra pone de 2 a 4 huevos de color marrón claro con manchas oscuras, lo que ayuda a que se mezclen con el entorno.
+    
+            Ambos padres comparten las tareas de incubación, que dura aproximadamente 26 a 28 días. Durante este tiempo, los teros son extremadamente protectores y pueden volverse agresivos si perciben amenazas cerca de su nido. Es común ver a los teros haciendo exhibiciones de "fingir lesiones" para alejar a los depredadores del nido, un comportamiento que implica actuar como si uno de los padres estuviera herido para atraer la atención lejos de los huevos o crías.
+    
+            Una vez que los polluelos nacen, son precociales, lo que significa que nacen con los ojos abiertos y cubiertos de un suave plumón que les permite seguir a sus padres poco después de la eclosión. A pesar de su independencia inicial, los polluelos siguen dependiendo de sus padres para aprender a buscar alimento y para protección. Durante las primeras semanas de vida, los teros jóvenes son guiados por sus padres a través del territorio, donde aprenden a identificar y capturar su propio alimento. A medida que crecen, los jóvenes teros se vuelven más independientes, y suelen dejar a sus padres después de aproximadamente un mes, cuando están listos para valerse por sí mismos.</p>
+    </div>
+    
+    <div class="info txt">
+        <h3>Conservación</h3>
+        <p>El tero es una especie ampliamente distribuida en América del Sur y, en general, no se encuentra en peligro de extinción. Sin embargo, como muchas otras especies, enfrenta amenazas relacionadas con la pérdida de hábitat debido a la expansión agrícola, la urbanización y el uso intensivo de pesticidas. A pesar de estas amenazas, los teros han demostrado ser altamente adaptables a diferentes tipos de hábitats, desde campos agrícolas hasta áreas suburbanas, lo que les ha permitido mantener poblaciones saludables en muchas regiones.
+    
+            En Uruguay, Argentina y otras partes de su rango, los teros son aves comunes y bien conocidas, incluso siendo considerados símbolos nacionales. Su presencia en áreas agrícolas a veces genera conflictos con los agricultores, ya que los teros pueden ser percibidos como una molestia debido a su comportamiento territorial y sus llamados ruidosos. No obstante, también desempeñan un papel importante en el control de plagas al alimentarse de insectos y otros invertebrados que pueden dañar los cultivos.
+    
+            Los esfuerzos de conservación para el tero no son tan intensivos como para otras especies más amenazadas, pero la protección de su hábitat sigue siendo crucial. La conservación de praderas y áreas naturales, así como la promoción de prácticas agrícolas sostenibles, son importantes para asegurar que los teros continúen prosperando. Además, la educación pública sobre la importancia ecológica del tero y su rol en el ecosistema puede ayudar a reducir los conflictos entre humanos y estas aves.
+    
+            A largo plazo, es importante monitorear las poblaciones de teros y las condiciones de sus hábitats para asegurar que no enfrenten un declive significativo. Aunque actualmente no están en peligro, el cambio en las prácticas agrícolas y la expansión urbana podrían afectar sus poblaciones si no se gestionan adecuadamente.</p>
+    </div>
+   </div>
+   <div class="estilo-de-vida-habitos">
+    <div class="foto-ave-habitos">
+        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-huevos-de-queltehues-en-chillc3a1n2c-chile-03.webp" alt="">
+    </div>
+    <div class="informacion-habitos">
+        <h2 class="titulo-habitos">Hábitos y Estilo de Vida</h2>
+        <p class="descripcion-habitos">El tero (Vanellus chilensis) es conocido por su comportamiento vigilante y ruidoso, especialmente cuando siente que su territorio o su nido está amenazado. Estas aves son muy territoriales y defensivas, utilizando su distintivo llamado "teroooo" para alertar a otros de la presencia de posibles intrusos. Este comportamiento no solo sirve para proteger a sus crías, sino también para disuadir a depredadores y competidores.
+    
+            Aunque son generalmente monógamos durante la temporada de cría, los teros pueden vivir en pequeñas bandadas fuera de la época reproductiva. Estas bandadas suelen estar compuestas por adultos y juveniles que se desplazan juntos en busca de alimento y refugio. Su dieta consiste principalmente en insectos, lombrices y otros pequeños invertebrados que encuentran en el suelo, utilizando su pico largo y delgado para excavar en la tierra y extraer sus presas.
+    
+            Los teros tienen una notable capacidad para adaptarse a diversos hábitats, desde campos abiertos y praderas hasta áreas urbanas y suburbanas. Esta adaptabilidad les ha permitido prosperar en regiones donde otras especies pueden tener dificultades para sobrevivir. Durante el día, los teros son activos y pueden ser vistos caminando por el suelo en busca de alimento, manteniendo una postura erguida y alerta. Al anochecer, suelen buscar refugio en áreas con vegetación baja o en campos abiertos donde pueden descansar y mantenerse a salvo de los depredadores.
+    
+            En cuanto a la comunicación, además de sus conocidos llamados, los teros utilizan una serie de posturas y movimientos corporales para interactuar entre sí y con otras especies. Pueden adoptar una postura amenazante, inflando sus plumas y extendiendo sus alas, para intimidar a posibles amenazas. También realizan exhibiciones de vuelo acrobático, especialmente durante la temporada de cría, lo que puede ser parte de un ritual de apareamiento o simplemente una demostración de agilidad y salud.
+    
+            Los teros son aves diurnas, lo que significa que son más activos durante el día. Durante las horas más calurosas del mediodía, pueden reducir su actividad y buscar sombra para descansar. En las noches más frías, especialmente durante el invierno, es común que los teros se reúnan en grupos para mantener el calor y protegerse mutuamente de los depredadores. A pesar de su comportamiento ruidoso y defensivo, los teros son aves sociales que pueden formar vínculos fuertes con sus compañeros y descendencia, mostrando un comportamiento cooperativo durante la crianza de los jóvenes.</p>
+        <p class="estilo-de-vida-p">CANTOS <span><audio controls src="audio.mp3"></audio></span></p>
+    </div>
+   </div>
+   <div class="informacion">
+    <div class="info txt">
+        <h3>Cultural</h3>
+        <p>El tero (Vanellus chilensis) tiene un significado cultural notable en varias regiones de América del Sur, especialmente en Uruguay y Argentina, donde es considerado un símbolo nacional. En Uruguay, el tero es conocido por ser el "ave de la patria", un emblema de la identidad nacional que refleja la vigilancia, la valentía y la capacidad de adaptarse a diferentes entornos. Su distintivo llamado "teroooo" es tan reconocible que se ha integrado en la cultura popular, siendo utilizado en canciones, leyendas y refranes que destacan la naturaleza protectora y alerta de este pájaro.
+
+            En la cultura gauchesca de Argentina, el tero tiene un lugar especial. Los gauchos, pastores tradicionales de las pampas, respetan al tero por su papel como centinela natural. Esta ave es conocida por su comportamiento territorial y por alertar con su llamado a la presencia de intrusos, lo que la convierte en una especie de guardián de las llanuras. Su capacidad para adaptarse a diferentes hábitats y convivir con los humanos también ha fortalecido su vínculo con las comunidades rurales.
+
+            Además, en el folclore y la mitología local, el tero a menudo se asocia con la astucia y la precaución. Se dice que el tero pone sus huevos en lugares diferentes a donde hace su nido para despistar a los depredadores, lo que ha dado lugar a expresiones populares que aluden a la estrategia y el engaño.
+
+            A lo largo de los años, el tero ha sido representado en numerosas obras de arte, desde pinturas hasta poesía, y sigue siendo un símbolo de la naturaleza resiliente de los pueblos de América del Sur. Este pequeño pero ruidoso guardián de las pampas y otros entornos se ha ganado un lugar destacado en la conciencia cultural de la región.</p>
+    </div>
+    <div class="info txt">
+        <h3>Huevos</h3>
+        <p>Los teros suelen poner entre 2 y 4 huevos durante la temporada de reproducción. A diferencia de muchas otras aves, los teros no construyen nidos elevados; en su lugar, ponen sus huevos en simples depresiones en el suelo, generalmente bien camufladas entre la vegetación baja o en áreas abiertas. Los huevos son de un color marrón claro con manchas oscuras, lo que les permite mezclarse eficazmente con su entorno y evitar ser detectados por depredadores.
+
+            Ambos padres participan activamente en la incubación de los huevos, un proceso que dura entre 26 y 28 días. Durante este tiempo, los teros son extremadamente protectores de su nido, utilizando su característico llamado para alertar a otros de posibles peligros. En caso de amenaza, los padres pueden simular estar heridos para alejar a los depredadores del nido, una táctica que a menudo resulta efectiva.
+
+            Los huevos de tero son altamente resistentes y pueden soportar las inclemencias del clima gracias a su cáscara gruesa y a la atención constante de los padres. Una vez que los polluelos nacen, son precociales, lo que significa que están relativamente bien desarrollados y pueden seguir a sus padres poco después de la eclosión. Este comportamiento les permite moverse rápidamente a un lugar seguro si el nido es amenazado.
+            <span class="huevos">
+                <img src="https://thumbs.dreamstime.com/b/huevos-del-tipo-de-tero-norteamericano-9558010.jpg" alt="Huevos de Tero">
+                <img src="https://media.istockphoto.com/id/827355854/es/foto/chorlito-de-huevos.jpg?s=612x612&w=0&k=20&c=GPzydHl8UacvS9llwjTqhfNclQ7kBw8s5IG5yAfQzZA=" alt="Huevos de Tero">
+            </span>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
